@@ -1,0 +1,19 @@
+<!doctype html>
+<title>MonthStock</title>
+<link rel=stylesheet type=text/css href='{{ url_for('static',filename='style.css')}}'>
+<div class=page>
+  <h1>Please enter a stock ticker symbol below</h1>
+  <div class=metanav>
+    
+    <form id='userinfoform' method='post' action='index' >
+      <p>
+        Ticker: <input type='text' name='ticker' />
+      </p>
+      <p>
+        <input type='submit' value='Submit' />
+      </p>
+    </form>
+    
+  </div>
+</div>
+

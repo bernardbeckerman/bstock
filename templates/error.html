@@ -1,0 +1,19 @@
+<!doctype html>
+<title>Error</title>
+<link rel=stylesheet type=text/css href='{{ url_for('static',filename='style.css')}}'>
+<div class=page>
+  <h1>Error</h1>
+  <div class=metanav>
+    <h3>
+      Looks like something has gone
+      wrong! 
+      <p>
+	<a href="https://www.quandl.com/">Quandl</a> may be having
+	trouble with the ticker symbol {{tkr}}. 
+      <p>
+	Check that your stock ticker symbol is
+	<a href="https://www.quandl.com/collections/stocks">listed</a>
+	or <a href='/index'>try another ticker</a>.
+    </h3>
+  </div>
+</div>
