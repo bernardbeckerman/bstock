@@ -20,10 +20,10 @@ def index():
 
 @app.route('/main')
 def main2():
-    return redirect('/next')
+    return redirect('/monthstock')
 
-@app.route('/next',methods=['GET'])
-def next():
+@app.route('/monthstock',methods=['GET'])
+def monthstock():
     ticker = app.vars['ticker']
     requrl_base = "https://www.quandl.com/api/v3/datasets/WIKI/"
     start_date = (datetime.datetime.today() - datetime.timedelta(days=31)).strftime('%Y-%m-%d')
