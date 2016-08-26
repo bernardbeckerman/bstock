@@ -1,7 +1,7 @@
 from flask import Flask,render_template,request,redirect
 import requests
 import datetime
-from dateutil.relativedelta import relativedelta
+#from dateutil.relativedelta import relativedelta
 import pandas as pd
 from bokeh.plotting import figure, output_file, save
 
@@ -26,7 +26,7 @@ def main2():
 def next():
     ticker = app.vars['ticker']
     requrl_base = "https://www.quandl.com/api/v3/datasets/WIKI/"
-    start_date = (datetime.datetime.today() - relativedelta(months=1)).strftime('%Y-%m-%d')
+    start_date = (datetime.datetime.today() - datetime.timedelta(days=31)).strftime('%Y-%m-%d')
     end_date   = datetime.datetime.today().strftime('%Y-%m-%d')
     requrl = requrl_base + ticker + '.json?start_date=' + start_date + '&end_date=' + end_date + '&api_key=y_bZCGtW3wX35wfxxNzC'
     r = requests.get(requrl)
